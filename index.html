@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Practice F8</title>
+    <link rel="stylesheet" href="./res/font/themify-icons/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="./res/style/style.css" /> -->
+    <link rel="stylesheet" href="./res/style/style.min.css" />
+  </head>
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+  <body>
+    <header id="header">
+      <nav id="headerSelector">
+        <div class="headerOpt" style="opacity: 1">Xem P1</div>
+        <div class="headerOpt">Hien len P2</div>
+        <div class="headerOpt">Vo doi P3</div>
+        <div class="headerOpt">P4</div>
+        <!-- <div id="headerSelectorLINE"></div> -->
+      </nav>
+    </header>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div id="body">
+      <section id="p1" style="display: block">
+        <nav>
+          <div id="0" class="p1Nav"><i class="fab fa-react"></i>React</div>
+          <div id="1" class="p1Nav"><i class="fab fa-angular"></i>Angular</div>
+          <div id="2" class="p1Nav"><i class="fab fa-sketch"></i>Ember</div>
+          <div id="3" class="p1Nav"><i class="fas fa-pen-nib"></i>Design</div>
+          <div class="p1LINE"></div>
+        </nav>
+        <div class="sectionBody">
+          <div class="sectionTitle"></div>
+          <div class="sectionDes"></div>
+        </div>
+      </section>
+      <section id="p2">
+        <div class="playerWrapper">
+          <div class="playerHeader">
+            <div class="playerNowPlaying">
+              Now Playing
+              <div class="playerMusicName">Nevada</div>
+            </div>
+            <div class="playerMusicCover">
+              <div class="playerMusicCover_" style="background-image: url('./res/img/sect2/0.jpg')"></div>
+              <audio src="./res/audio/sect2/Nyanpasu.mp3"></audio>
+            </div>
+            <div class="playerController">
+              <div id="playerRepeat" class="playerControllerBtn"><i class="ti-reload"></i></div>
+              <div id="playerPrev" class="playerControllerBtn"><i class="ti-control-skip-backward"></i></div>
+              <div id="playerPlay" class="playerControllerBtn">
+                <!--  -->
+                <i class="ti-control-play"></i>
+                <!--  -->
+                <i class="ti-control-pause"></i>
+              </div>
+              <!-- <div id="playerPause" class="playerControllerBtn"><i class="ti-control-pause"></i></div> -->
+              <div id="playerNext" class="playerControllerBtn"><i class="ti-control-skip-forward"></i></div>
+              <div id="playerSuf" class="playerControllerBtn"><i class="ti-control-shuffle"></i></div>
+              <div id="playerVolume"></div>
+            </div>
+            <div class="playerProgress">
+              <div class="playerProgressBG">
+                <div class="playerProgressed">
+                  <div class="onHover">12:12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="playerList"></div>
+        </div>
+      </section>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- <script src="./res/js/app.js"></script> -->
+    <script src="./res/js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,582 @@
+:root {
+  --mainC: #c23564;
+  --mainCBlurText: #f6a8c1;
+  --mainCBlurBorder: #fbdce6;
+  --mainCBlurBG: #fff7fa;
+  --headerH: 50px;
+}
+
+@font-face {
+  font-family: sitkaCss;
+  src: url(../font/Sitka.ttc);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50px;
+}
+
+#header #headerSelector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#header #headerSelector .headerOpt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  padding: 0 6px;
+  color: black;
+  cursor: pointer;
+  opacity: 0.6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #headerSelector .headerOpt:hover {
+  opacity: 1;
+}
+
+#header #headerSelector .headerOpt::before {
+  font-family: "themify";
+  content: "\e724";
+  margin-right: 2px;
+}
+
+#body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#body section {
+  display: none;
+  width: 100%;
+}
+
+#body section .sectionBody {
+  font-family: monospace;
+}
+
+#body section .sectionTitle {
+  padding: 12px 0;
+  font-size: 24px;
+}
+
+#body section .sectionDes {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+#body #p1 {
+  margin: 0 auto;
+  position: relative;
+  width: 520px;
+}
+
+#body #p1 nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body #p1 nav .p1LINE {
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+  width: 119px;
+  height: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #c23564;
+  border-radius: 2px;
+}
+
+#body #p1 nav .p1Nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 24px;
+  font-size: 20px;
+  color: #f6a8c1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+}
+
+#body #p1 nav .p1Nav:hover {
+  background: #fff7fa;
+  border-color: #fbdce6;
+}
+
+#body #p1 nav .p1Nav:hover i {
+  color: #c23564;
+}
+
+#body #p1 nav .p1Nav i {
+  -webkit-transition: inherit;
+  transition: inherit;
+  padding-right: 6px;
+}
+
+#body #p2 {
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+#body #p2 .playerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 460px;
+  max-width: 100%;
+  max-height: 100%;
+  background: #fdeaa2;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#body #p2 .playerHeader {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 20px);
+  margin: 12px auto;
+  border-radius: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+#body #p2 .playerHeader::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-image: url(../img/sect2/samuel-amar-final-presentation.jpg);
+  background-size: cover;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-animation: playerHeader 30s linear alternate infinite;
+          animation: playerHeader 30s linear alternate infinite;
+}
+
+@-webkit-keyframes playerHeader {
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes playerHeader {
+  100% {
+    background-position: right;
+  }
+}
+
+#body #p2 .playerHeader::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1));
+}
+
+#body #p2 .playerHeader .playerNowPlaying {
+  z-index: 1;
+  font-family: sitkaCss;
+  font-size: 12px;
+  color: #564a80;
+  margin: 16px;
+  text-shadow: 0 0 3px currentColor;
+  text-align: center;
+}
+
+#body #p2 .playerHeader .playerNowPlaying .playerMusicName {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd3ad;
+  text-shadow: none;
+}
+
+#body #p2 .playerHeader .playerMusicCover {
+  width: 80%;
+  background: green;
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#body #p2 .playerHeader .playerMusicCover .playerMusicCover_ {
+  padding-top: 100%;
+  -webkit-animation: spin360 10s linear infinite;
+          animation: spin360 10s linear infinite;
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  -webkit-box-shadow: inset 0 0 8px white;
+          box-shadow: inset 0 0 8px white;
+}
+
+@-webkit-keyframes spin360 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin360 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#body #p2 .playerHeader .playerController {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 16px 0 8px;
+  z-index: 1;
+}
+
+#body #p2 .playerHeader .playerController > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #564a80;
+  transition: 0.3s;
+  text-shadow: 0 0 3px white;
+  border-radius: 50%;
+}
+
+#body #p2 .playerHeader .playerController > *.active:not(#playerPlay), #body #p2 .playerHeader .playerController > *:active {
+  background: #564a80 !important;
+  color: #e7e0ff !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+#body #p2 .playerHeader .playerController > *:hover {
+  color: #e7e0ff;
+  background: #7b81e8;
+}
+
+#body #p2 .playerHeader .playerController #playerPlay {
+  background: #564a80;
+  font-size: 30px;
+  color: #e7e0ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#body #p2 .playerHeader .playerController #playerPlay > i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#body #p2 .playerHeader .playerController #playerPlay.active {
+  background: #fff6d4 !important;
+  color: #564a80 !important;
+}
+
+#body #p2 .playerHeader .playerController #playerPlay.active i[class*="play"] {
+  display: none !important;
+}
+
+#body #p2 .playerHeader .playerController #playerPlay:not(.active) i[class*="pause"] {
+  display: none !important;
+}
+
+#body #p2 .playerHeader .playerController #playerVolume {
+  position: absolute;
+  background-color: red;
+  bottom: 21%;
+  top: 21%;
+  right: 0;
+  border-radius: 0;
+  z-index: 1;
+  display: none;
+}
+
+#body #p2 .playerHeader .playerProgress {
+  z-index: 2;
+  width: 100%;
+  height: 26px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+#body #p2 .playerHeader .playerProgress .playerProgressBG {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff6d4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#body #p2 .playerHeader .playerProgress .playerProgressBG .playerProgressed {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  height: 100%;
+  min-width: 4px;
+  max-width: 100%;
+  background: #7b1c99;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#body #p2 .playerHeader .playerProgress .playerProgressBG .playerProgressed .onHover {
+  position: absolute;
+  bottom: calc(100% + 2px);
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  color: #ccac62;
+  font-family: sitkaCss;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background: #2b2540;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 12px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  white-space: nowrap;
+  overflow: visible;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#body #p2 .playerHeader .playerProgress .playerProgressBG .playerProgressed .onHover::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 1px solid #000;
+  border-width: 2px 4px 0px 4px;
+  border-color: #2b2540 transparent;
+}
+
+#body #p2 .playerHeader .playerProgress:hover .playerProgressBG, #body #p2 .playerHeader .playerProgress.active .playerProgressBG {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+#body #p2 .playerHeader .playerProgress:hover .onHover, #body #p2 .playerHeader .playerProgress.active .onHover {
+  opacity: 1 !important;
+}
+
+#body #p2 .playerHeader .playerProgress:hover .playerProgressed, #body #p2 .playerHeader .playerProgress.active .playerProgressed {
+  height: calc(100% + 2px);
+}
+
+#body #p2 .playerList {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  margin-bottom: 12px;
+  overflow-y: scroll;
+}
+
+#body #p2 .playerList::-webkit-scrollbar {
+  display: none;
+}
+
+#body #p2 .playerList .playerItem {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  border-radius: 10px;
+  background: #fc9596;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#body #p2 .playerList .playerItem.active {
+  background: #fff6d4 !important;
+}
+
+#body #p2 .playerList .playerItem.active .playerItemInfo {
+  color: #7b1c99 !important;
+  text-shadow: none !important;
+}
+
+#body #p2 .playerList .playerItem.active .playerItemMore {
+  color: #000;
+}
+
+#body #p2 .playerList .playerItem + .playerItem {
+  margin-top: 12px;
+}
+
+#body #p2 .playerList .playerItem:hover {
+  background: #fcd195;
+}
+
+#body #p2 .playerList .playerItem:hover .playerItemInfo {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#body #p2 .playerList .playerItem .playerItemAvatar {
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+#body #p2 .playerList .playerItem .playerItemAvatar .playerItemAvatar_ {
+  padding-top: 100%;
+}
+
+#body #p2 .playerList .playerItem .playerItemInfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: sitkaCss;
+  margin-left: 20px;
+  color: white;
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#body #p2 .playerList .playerItem .playerItemInfo .playerItemTitle {
+  font-size: 15px;
+}
+
+#body #p2 .playerList .playerItem .playerItemInfo .playerItemSinger {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+#body #p2 .playerList .playerItem .playerItemMore {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#body #p2 .playerList .playerItem .playerItemMore:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*# sourceMappingURL=style.css.map */
